@@ -1,1 +1,35 @@
-let j = 0;
+
+
+const time = ["Today", "Tomorrow", "In 3 days", "Two months from now", "In the next 5 minutes", "In 2 hours", "Right is second", "When you are old and frail", "Next winter", "Next year"];
+const descript = ["mysteriously", "obviously", "suspiciously", "quickly", "slowly", "unexpectedly", "ferociously", "timidly", "annoyingly", "happily"];
+const events = ["take a dick in the butt", "be impailed by a pole", "be mauled by a bear", "fall in love but with and ugly person", "fall in love", 
+"eat your favorite food but get food poisoning and throw it all up", "think you have to fart but end up shitting your pants", "be the victum of a drive by insult that will leave you questioning your whole life",
+"get your dream job", "lose your dream job"];
+
+const genRandNum = () => {
+       return Math.floor(Math.random()* 11);
+}
+
+const timePred = (randNum) => {
+    let predTime = time[randNum];
+    return predTime;
+}
+
+const descPred = (random) => {
+    let predDesc = descript[random];
+    return predDesc;
+}
+
+const eventPred = (rand) => {
+    let predEvent = events[rand];
+    return predEvent;
+}
+
+let lastTime = timePred(genRandNum);
+let lastDesc = descPred(genRandNum);
+let lastEvent = eventPred(genRandNum);
+
+const finalPred = (time, description, events) => {
+    let finalPhrase = time + " you will " + description + " " + events + ".";
+    return finalPhrase;
+}
